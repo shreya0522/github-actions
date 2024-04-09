@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Check Nginx version
         run: sudo apt install plocate -y 
+
+      - name: echo 
+        run: echo "Hello World"
