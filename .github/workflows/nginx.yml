@@ -1,0 +1,22 @@
+name: Nginx Installation Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install_nginx:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Nginx
+        run: |
+          sudo apt-get update
+          sudo apt-get install nginx -y
+
+      - name: Check Nginx status
+        run: sudo service nginx status
