@@ -1,4 +1,4 @@
-name: Nginx Installation Workflow
+name: Nginx Version Check Workflow
 
 on:
   push:
@@ -18,5 +18,5 @@ jobs:
           sudo apt-get update
           sudo apt-get install nginx -y
 
-      - name: Check Nginx status
-        run: sudo service nginx status
+      - name: Check Nginx version
+        run: nginx -v
