@@ -1,0 +1,20 @@
+name: Install Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install tree
+        run: mkdir - p actions/workflow
+
+      - name: list
+        run: ls actions 
